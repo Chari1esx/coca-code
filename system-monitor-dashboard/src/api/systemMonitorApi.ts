@@ -1,7 +1,7 @@
-import request from '@/config'
+import client from '@/config'
 
 const getCpuLoad = () => {
-  return request.get('/system/cpu/load')
+  return client.get('/system/cpu/load')
 }
 
 export {
