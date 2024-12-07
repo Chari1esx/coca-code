@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.charless.cocacode</groupId>
-        <artifactId>coca-code-parent</artifactId>
+        <artifactId>coca-code</artifactId>
         <version>0.1.0</version>
     </parent>
 
