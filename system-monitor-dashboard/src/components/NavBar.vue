@@ -1,51 +1,31 @@
 <script setup lang="ts">
-import {h, onMounted, ref, watch} from 'vue'
+import { h, ref } from 'vue'
 import { HomeOutlined, MonitorOutlined } from '@ant-design/icons-vue'
 import type { MenuProps } from 'ant-design-vue'
-import { useRoute, useRouter } from 'vue-router'
+import { useRouter } from 'vue-router'
 
 const router = useRouter()
-const route = useRoute()
 
 const handleMenuClick = ({ key }: { key: string }) => {
-  switch (key) {
-    case 'dashboard':
-      router.push({ name: 'home' })
-      break
-    case 'cpu':
-      router.push({ name: 'cpu' })
-      break
-  }
-}
-const getCurrentMenuKey = (): string => {
-  return route.path === '/cpu' ? 'cpu' : 'dashboard'
+  router.push({ path: key })
 }
 
 const current = ref<string[]>([])
-
-onMounted(() => {
-  current.value = [getCurrentMenuKey()]
+router.afterEach((to) => {
+  current.value = [to.path]
 })
-
-watch(
-  () => route.path,
-  (newPath) => {
-    console.log('Route path changed to:', newPath)
-    current.value = [getCurrentMenuKey()]
-  },
-)
 
 const items = ref<MenuProps['items']>([
   {
-    key: 'dashboard',
+    key: '/',
     icon: () => h(HomeOutlined),
-    label: 'Dashboard',
+    label: 'dashboard',
     title: 'Dashboard',
   },
   {
-    key: 'cpu',
+    key: '/cpu',
     icon: () => h(MonitorOutlined),
-    label: 'CPU',
+    label: 'cpu',
     title: 'CPU',
   },
 ])
@@ -54,7 +34,7 @@ const items = ref<MenuProps['items']>([
 <template>
   <div class="nav-container">
     <div class="logo">
-      <img src="@/assets/charless.svg" alt="" />
+      <img src="@/assets/charless.svg" alt="logo" />
     </div>
     <a-menu
       v-model:selectedKeys="current"

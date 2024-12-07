@@ -1,11 +1,11 @@
-import HomeView from '@/views/HomeView.vue'
-import CpuLoad from "@/views/cpu/CpuLoad.vue";
+import Dashboard from '@/views/Dashboard.vue'
+import CpuLoad from '@/views/cpu/CpuLoad.vue'
 
 export const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView,
+    name: 'dashboard',
+    component: Dashboard,
   },
   {
     path: '/cpu',

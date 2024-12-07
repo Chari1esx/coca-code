@@ -4,6 +4,4 @@ const getCpuLoad = () => {
   return client.get('/system/cpu/load')
 }
 
-export {
-  getCpuLoad,
-}
+export { getCpuLoad }
