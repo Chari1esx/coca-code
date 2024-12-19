@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: system-monitor
+
+server:
+  port: 7071
+  servlet:
+    context-path: /api
+
+logging:
+  level:
+    com.charless.cocacode: debug
