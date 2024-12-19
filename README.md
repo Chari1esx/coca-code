@@ -7,3 +7,8 @@
 1. system-monitor: 后端服务
     1. Spring Boot 3
     2. `OSHI`: Native Operating System and Hardware Information
+2. system-monitor-dashboard: 用户界面
+    1. Vue3
+    2. Axios
+    3. ECharts
+    4. Ant Design Vue
