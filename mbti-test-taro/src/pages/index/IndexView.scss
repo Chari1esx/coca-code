@@ -1,0 +1,23 @@
+.index-view {
+
+  .title {
+    color: #5B619C;
+    font-weight: bold;
+    padding-top: 17vh;
+    text-align: center;
+    padding-bottom: 24px;
+  }
+
+  .btn {
+    width: 60vw;
+  }
+
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1
+  }
+}

@@ -12,3 +12,9 @@
     2. Axios
     3. ECharts
     4. Ant Design Vue
+
+# $. demo
+
+1. mbti-test-taro 用于微信小程序的 MBTI 性格测试
+    1. Taro 3.x
+    2. Taro UI Vue3
